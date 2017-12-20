@@ -8,14 +8,13 @@ import ContentSort from 'material-ui/svg-icons/content/sort';
 import ActionDate from 'material-ui/svg-icons/action/date-range';
 import ActionLike from 'material-ui/svg-icons/action/thumb-up';
 import CommunicationComment from 'material-ui/svg-icons/communication/comment';
-import {List, ListItem} from 'material-ui/List';
-import Subheader from 'material-ui/Subheader';
+import {List} from 'material-ui/List';
 import Divider from 'material-ui/Divider';
-import Avatar from 'material-ui/Avatar';
-import {Card, CardActions, CardHeader, CardTitle, CardText} from 'material-ui/Card';
+import {Card, CardHeader, CardTitle, CardText} from 'material-ui/Card';
 import SocialPerson from 'material-ui/svg-icons/social/person';
 import {lightBlue800, amber800} from 'material-ui/styles/colors';
 import AppBar from 'material-ui/AppBar'
+import Heap from './Heap';
 
 const SortComponent = ({onChange, value, tooltip}) =>
 	<IconMenu
@@ -87,7 +86,7 @@ class Blog extends React.Component {
 					actAsExpander={true}
 					showExpandableButton={true}
 				/>
-				<CardText expandable={true}>
+				<CardText expandable={true} style={{wordWrap: "break-word"}}>
 					{body.slice(0, this.state.summarySize) + ((body.length > this.state.summarySize) ? " [...]" : "")}
 				</CardText>
 				<Divider />
@@ -97,24 +96,44 @@ class Blog extends React.Component {
 }
 
 class BlogsList extends React.Component {
-	sortBlogs = (list, sortBy) => {
+	// Currently use partial sorting through Heaps. 
+	// Time complexity: O({list.length} + {count}log({list.length} + {count}log({count}))
+	sortBlogs = (list, sortBy, count) => {
+		var arr = [], i, length, heapList;
 		if (sortBy === "timestamp") {
-			return [].concat(list).sort((a, b) =>
-				new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
+			heapList = new Heap(list, (a, b) =>
+				new Date(a.timestamp).getTime() > new Date(b.timestamp).getTime());
+			for (i = 0, length = Math.min(list.length, count); i < length; i++) {
+				arr.push(heapList.extractRoot());
+			}
+			arr.sort((b, a) => 
+				new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime())
 		}
 		else if (sortBy === "comments") {
-			return [].concat(list).sort((a, b) =>
-				b.comments.length - a.comments.length);
+			heapList = new Heap(list, (a, b) =>
+				a.comments.length > b.comments.length);
+			for (i = 0, length = Math.min(list.length, count); i < length; i++) {
+				arr.push(heapList.extractRoot());
+			}
+			arr.sort((b, a) => 
+				a.comments.length - b.comments.length)
 		}
 		else if (sortBy === "likes") {
-			return [].concat(list).sort((a, b) =>
-				b.likes - a.likes);
+			heapList = new Heap(list, (a, b) =>
+				a.likes > b.likes);
+			for (i = 0, length = Math.min(list.length, count); i < length; i++) {
+				arr.push(heapList.extractRoot());
+			}
+			arr.sort((b, a) => 
+				a.likes - b.likes)
 		}
+		
+		return arr
 	}
 
 	render() {
 		const {list, sortBy, count} = this.props;
-		const blogs = this.sortBlogs(list, sortBy).slice(0, count);
+		const blogs = this.sortBlogs(list, sortBy, count);
 		return (
 			<List style={{maxHeight: '90%', overflow: 'auto'}}>
 			{blogs.map((blog, index) => 
@@ -131,7 +150,6 @@ class TopBlogs extends React.Component {
 			valueSort: "likes",
 			blogsCount: 10
 		};
-		//this.handleSortChange = this.handleSortChange.bind(this);
 	}
 
 	handleSortChange = (event, value) => {
