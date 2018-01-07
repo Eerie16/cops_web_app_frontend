@@ -1,6 +1,6 @@
 import React from 'react';
 import Achievements from './components/Achievements';
-import TopBlogs from './components/TopBlogs';
+import TopBlogs from './TopBlogs';
 import Groups from './Groups';
 
 const About = () => (
