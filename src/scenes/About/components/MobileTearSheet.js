@@ -25,7 +25,7 @@ class MobileTearSheet extends React.Component {
       root: {
         marginBottom: 24,
         marginRight: 24,
-        maxWidth: 450,
+        maxWidth: '100vw',
         width: '100%',
       },
       container: {
@@ -38,7 +38,7 @@ class MobileTearSheet extends React.Component {
         display: 'block',
         position: 'relative',
         marginTop: -10,
-        maxWidth: 450,
+        maxWidth: '100vw',
       },
     };
 

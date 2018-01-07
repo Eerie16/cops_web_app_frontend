@@ -5,8 +5,6 @@ import TopBlogs from './components/TopBlogs';
 
 const About = () => (
 <div>
-	<Achievements/>
-	<TeamMembers/>
 	<TopBlogs />
 </div>
 )

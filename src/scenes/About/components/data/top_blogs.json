@@ -1,65 +1,336 @@
 [
-	{
-		"title": "Awesome post!",
-		"body": "Yeah, this is awesome! Wooooooooooooooooooo~!",
-		"author": "AwesomeGuy",
-		"avatar": "",
-		"timestamp": "Mon Dec 18 2017 09:01:37 GMT",
-		"category": "general",
-		"comments": [
-			{
-				"author": "NOTAwesomeGuy",
-				"body": "No, not awesome!",
-				"timestamp": "Mon Dec 18 2017 09:11:37 GMT"
-			}
-		],
-		"likes": 10
-	},
-	{
-		"title": "NOT Awesome post!",
-		"body": "No, you heard right - this isn't awesome! BoooOOOOOOOooooooooooooOOOOOOOooooooooooooooo~!",
-		"author": "NOTAwesomeGuy",
-		"avatar": "",
-		"timestamp": "Sun Dec 17 2017 07:26:53 GMT",
-		"category": "general",
-		"comments": [],
-		"likes": 15
-	},
-	{
-		"title": "Boring post",
-		"body": "~~~~~~~~~~~~~~~~~~ABCDEFGHIKLMNOPQRSTUVWXYZ1234567890[]@#$%^&*()ABCDEFGHIKLMNOPQRSTUVWXYZ-=+_",
-		"author": "BoredGuy",
-		"avatar": "",
-		"timestamp": "Mon Dec 18 2017 04:01:41 GMT",
-		"category": "random",
-		"comments": [
-			{
-				"author": "BoredGuy",
-				"body": "Why not comment myself because I'm bored?",
-				"timestamp": "Mon Dec 18 2017 04:02:31 GMT"
-			},
-			{
-				"author": "BoredGuy",
-				"body": "Yep, again.... ",
-				"timestamp": "Mon Dec 18 2017 09:02:31 GMT"
-			}
-		],
-		"likes": 1
-	},
-	{
-		"title": "Generic post",
-		"body": "TODO",
-		"author": "Admin",
-		"avatar": "",
-		"timestamp": "Tue Dec 19 2017 00:00:00 GMT",
-		"category": "Important",
-		"comments": [
-			{
-				"author": "AwesomeGuy",
-				"body": "No, this is not awesome! Remove this!!!!",
-				"timestamp": "Mon Dec 19 2017 09:11:37 GMT"
-			}
-		],
-		"likes": 100
-	}
+  {
+    "name": "cod",
+    "title": "Club of Developers",
+    "blogs": [
+      {
+        "title": "Awesome post! #1",
+        "body": "Yeah, this is awesome! Wooooooooooooooooooo~!",
+        "author": "AwesomeGuy",
+        "avatar": "",
+        "timestamp": "Mon Dec 18 2017 09:01:37 GMT",
+        "featured": false,
+        "tags": [
+          "random"
+        ],
+        "comments": [
+            {
+                "author": "NOTAwesomeGuy",
+                "body": "No, not awesome!",
+                "timestamp": "Mon Dec 18 2017 09:11:37 GMT"
+            }
+        ],
+        "likes": 10
+      },
+      {
+        "title": "Awesome post! #2",
+        "body": "Yeah, this is awesome! Wooooooooooooooooooo~!",
+        "author": "AwesomeGuy",
+        "avatar": "",
+        "timestamp": "Mon Dec 18 2017 09:01:37 GMT",
+        "featured": false,
+        "tags": [
+          "random"
+        ],
+        "comments": [
+            {
+                "author": "NOTAwesomeGuy",
+                "body": "No, not awesome!",
+                "timestamp": "Mon Dec 18 2017 09:11:37 GMT"
+            }
+        ],
+        "likes": 10
+      },
+      {
+        "title": "Awesome post! #3",
+        "body": "Yeah, this is awesome! Wooooooooooooooooooo~!",
+        "author": "AwesomeGuy",
+        "avatar": "",
+        "timestamp": "Mon Dec 18 2017 09:01:37 GMT",
+        "featured": false,
+        "tags": [
+          "random"
+        ],
+        "comments": [
+            {
+                "author": "NOTAwesomeGuy",
+                "body": "No, not awesome!",
+                "timestamp": "Mon Dec 18 2017 09:11:37 GMT"
+            }
+        ],
+        "likes": 10
+      },
+      {
+        "title": "Awesome post! #4",
+        "body": "Yeah, this is awesome! Wooooooooooooooooooo~!",
+        "author": "AwesomeGuy",
+        "avatar": "",
+        "timestamp": "Mon Dec 18 2017 09:01:37 GMT",
+        "featured": false,
+        "tags": [
+          "random"
+        ],
+        "comments": [
+            {
+                "author": "NOTAwesomeGuy",
+                "body": "No, not awesome!",
+                "timestamp": "Mon Dec 18 2017 09:11:37 GMT"
+            }
+        ],
+        "likes": 10
+      },
+      {
+        "title": "Awesome post! #5",
+        "body": "Yeah, this is awesome! Wooooooooooooooooooo~!",
+        "author": "AwesomeGuy",
+        "avatar": "",
+        "timestamp": "Mon Dec 18 2017 09:01:37 GMT",
+        "featured": false,
+        "tags": [
+          "random"
+        ],
+        "comments": [
+            {
+                "author": "NOTAwesomeGuy",
+                "body": "No, not awesome!",
+                "timestamp": "Mon Dec 18 2017 09:11:37 GMT"
+            }
+        ],
+        "likes": 10
+      },
+      {
+        "title": "Awesome post! #6",
+        "body": "Yeah, this is awesome! Wooooooooooooooooooo~!",
+        "author": "AwesomeGuy",
+        "avatar": "",
+        "timestamp": "Mon Dec 18 2017 09:01:37 GMT",
+        "featured": false,
+        "tags": [
+          "random"
+        ],
+        "comments": [
+            {
+                "author": "NOTAwesomeGuy",
+                "body": "No, not awesome!",
+                "timestamp": "Mon Dec 18 2017 09:11:37 GMT"
+            }
+        ],
+        "likes": 10
+      },
+      {
+        "title": "Awesome post! #7",
+        "body": "Yeah, this is awesome! Wooooooooooooooooooo~!",
+        "author": "AwesomeGuy",
+        "avatar": "",
+        "timestamp": "Mon Dec 18 2017 09:01:37 GMT",
+        "featured": false,
+        "tags": [
+          "random"
+        ],
+        "comments": [
+            {
+                "author": "NOTAwesomeGuy",
+                "body": "No, not awesome!",
+                "timestamp": "Mon Dec 18 2017 09:11:37 GMT"
+            }
+        ],
+        "likes": 10
+      },
+      {
+        "title": "NOT Awesome post!",
+        "body": "No, you heard right - this isn't awesome! BoooOOOOOOOooooooooooooOOOOOOOooooooooooooooo~!",
+        "author": "NOTAwesomeGuy",
+        "avatar": "",
+        "timestamp": "Sun Dec 17 2017 07:26:53 GMT",
+        "featured": false,
+        "tags": [
+          "random"
+        ],
+        "comments": [],
+        "likes": 15
+      },
+      {
+        "title": "important post",
+        "body": "todo",
+        "author": "admin",
+        "avatar": "",
+        "timestamp": "tue dec 19 2017 00:00:00 gmt",
+        "featured": true,
+        "tags": [
+          "important"
+        ],
+        "comments": [
+            {
+                "author": "awesomeguy",
+                "body": "no, this is not awesome! remove this!!!!",
+                "timestamp": "mon dec 19 2017 09:11:37 gmt"
+            }
+        ],
+        "likes": 100
+      },
+      {
+        "title": "boring post",
+        "body": "~~~~~~~~~~~~~~~~~~abcdefghiklmnopqrstuvwxyz1234567890[]@#$%^&*()abcdefghiklmnopqrstuvwxyz-=+_",
+        "author": "boredguy",
+        "avatar": "",
+        "timestamp": "mon dec 18 2017 04:01:41 gmt",
+        "featured": true,
+        "tags": [
+          "general",
+          "random"
+        ],
+        "comments": [
+            {
+                "author": "boredguy",
+                "body": "why not comment myself because i'm bored?",
+                "timestamp": "mon dec 18 2017 04:02:31 gmt"
+            },
+            {
+                "author": "boredguy",
+                "body": "yep, again.... ",
+                "timestamp": "mon dec 18 2017 09:02:31 gmt"
+            }
+        ],
+        "likes": 1
+      }
+    ]
+  },
+  {
+    "name": "cpg",
+    "title": "Competitive Programming group",
+    "blogs": [
+      {
+        "title": "boring post",
+        "body": "~~~~~~~~~~~~~~~~~~abcdefghiklmnopqrstuvwxyz1234567890[]@#$%^&*()abcdefghiklmnopqrstuvwxyz-=+_",
+        "author": "boredguy",
+        "avatar": "",
+        "timestamp": "mon dec 18 2017 04:01:41 gmt",
+        "featured": false,
+        "tags": [
+          "random"
+        ],
+        "comments": [
+            {
+                "author": "boredguy",
+                "body": "why not comment myself because i'm bored?",
+                "timestamp": "mon dec 18 2017 04:02:31 gmt"
+            },
+            {
+                "author": "boredguy",
+                "body": "yep, again.... ",
+                "timestamp": "mon dec 18 2017 09:02:31 gmt"
+            }
+        ],
+        "likes": 1
+      },
+      {
+        "title": "important post",
+        "body": "todo",
+        "author": "admin",
+        "avatar": "",
+        "timestamp": "tue dec 19 2017 00:00:00 gmt",
+        "featured": true,
+        "tags": [
+          "important",
+          "business"
+        ],
+        "comments": [
+            {
+                "author": "awesomeguy",
+                "body": "no, this is not awesome! remove this!!!!",
+                "timestamp": "mon dec 19 2017 09:11:37 gmt"
+            }
+        ],
+        "likes": 100
+      }
+    ]
+  },
+  {
+    "name": "osg",
+    "title": "Open Source group",
+    "blogs": [
+      {
+        "title": "Boring post",
+        "body": "~~~~~~~~~~~~~~~~~~ABCDEFGHIKLMNOPQRSTUVWXYZ1234567890[]@#$%^&*()ABCDEFGHIKLMNOPQRSTUVWXYZ-=+_",
+        "author": "BoredGuy",
+        "avatar": "",
+        "timestamp": "Mon Dec 18 2017 04:01:41 GMT",
+        "featured": false,
+        "tags": [
+          "general"
+        ],
+        "comments": [
+            {
+                "author": "BoredGuy",
+                "body": "Why not comment myself because I'm bored?",
+                "timestamp": "Mon Dec 18 2017 04:02:31 GMT"
+            },
+            {
+                "author": "BoredGuy",
+                "body": "Yep, again.... ",
+                "timestamp": "Mon Dec 18 2017 09:02:31 GMT"
+            }
+        ],
+        "likes": 1
+      },
+      {
+        "title": "Generic post",
+        "body": "TODO",
+        "author": "Admin",
+        "avatar": "",
+        "timestamp": "Tue Dec 19 2017 00:00:00 GMT",
+        "featured": true,
+        "tags": [
+          "important"
+        ],
+        "comments": [
+        ],
+        "likes": 100
+      }
+    ]
+  },
+  {
+    "name": "isg",
+    "title": "Information Security group",
+    "blogs": [
+      {
+        "title": "Boring post",
+        "body": "~~~~~~~~~~~~~~~~~~ABCDEFGHIKLMNOPQRSTUVWXYZ1234567890[]@#$%^&*()ABCDEFGHIKLMNOPQRSTUVWXYZ-=+_",
+        "author": "BoredGuy",
+        "avatar": "",
+        "timestamp": "Mon Dec 18 2017 04:01:41 GMT",
+        "featured": false,
+        "tags": [
+          "general"
+        ],
+        "comments": [
+            {
+                "author": "BoredGuy",
+                "body": "Why not comment myself because I'm bored?",
+                "timestamp": "Mon Dec 18 2017 04:02:31 GMT"
+            },
+            {
+                "author": "BoredGuy",
+                "body": "Yep, again.... ",
+                "timestamp": "Mon Dec 18 2017 09:02:31 GMT"
+            }
+        ],
+        "likes": 1
+      },
+      {
+        "title": "Generic post",
+        "body": "TODO",
+        "author": "Admin",
+        "avatar": "",
+        "timestamp": "Tue Dec 19 2017 00:00:00 GMT",
+        "featured": true,
+        "tags": [
+          "important"
+        ],
+        "comments": [
+        ],
+        "likes": 100
+      }
+    ]
+  }
 ]
