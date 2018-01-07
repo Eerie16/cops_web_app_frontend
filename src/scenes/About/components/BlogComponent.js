@@ -21,7 +21,7 @@ class Blog extends React.Component {
 		});
 
 	render() {
-		const {title, avatar, author, timestamp, body, likes, comments, category, index} = this.props;
+		const {title, avatar, author, timestamp, body, likes, comments, tags, index} = this.props;
 		const iconStyle = {
 			width: '20px',
 			height: '20px'
@@ -30,14 +30,16 @@ class Blog extends React.Component {
 			<Card 
 				expanded={this.state.expanded}
 				onExpandChange={this.handleExpandChange}
+				className='blog'
 			>
 				<CardHeader 
 					title={<b>{author}</b>}
 					style={(index%2 !== 0) ? {textAlign: "right"} : {}}
 					textStyle={{paddingRight: "0px"}}
-					subtitle={<div>In <b>{category}</b> - {new Date(timestamp).toLocaleString()}</div>}
-					avatar={(avatar !== "") ? "images/" + avatar : <SocialPerson />}
+					subtitle={<div>In <b>{tags[0]}</b> - {new Date(timestamp).toLocaleString()}</div>}
+					avatar={(avatar !== "") ? "images/" + avatar : <SocialPerson style />}
 					actAsExpander={true}
+					className={'blog-header-' + ((index%2 !== 0) ? 'right' : 'left')}
 				/>
 				<CardTitle
 					title={title}
@@ -54,7 +56,8 @@ class Blog extends React.Component {
 					showExpandableButton={true}
 				/>
 				<CardText expandable={true} style={{wordWrap: "break-word"}}>
-					{body.slice(0, this.state.summarySize) + ((body.length > this.state.summarySize) ? " [...]" : "")}
+					<p class="blog-tags">{tags.length>1 ? 'Tags:' : 'Tag:'} {tags.join(', ')}</p>
+					<p>{body.slice(0, this.state.summarySize) + ((body.length > this.state.summarySize) ? " [...]" : "")}</p>
 				</CardText>
 				<Divider />
 			</Card>

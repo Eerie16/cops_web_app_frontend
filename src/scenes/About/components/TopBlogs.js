@@ -1,5 +1,5 @@
 import React from 'react'
-import data from './data/top_blogs'
+import data from './data/blogs'
 import BlogsList from './BlogsListComponent'
 import {GridList} from 'material-ui/GridList'
 import IconButton from 'material-ui/IconButton'
