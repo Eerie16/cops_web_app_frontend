@@ -1,10 +1,12 @@
 import React from 'react';
 import Achievements from './components/Achievements';
-import TeamMembers from './components/TeamMembers';
 import TopBlogs from './components/TopBlogs';
+import Groups from './Groups';
 
 const About = () => (
 <div>
+	<Achievements/>
+	<Groups/>
 	<TopBlogs />
 </div>
 )
