@@ -1,0 +1,133 @@
+@keyframes typing { 
+  0% { width: 0; } 
+}
+@keyframes cursor { 50% { border-color: transparent; } }
+
+.slider-arrow-left, .slider-arrow-right {
+  align-items: center;
+  display: flex;
+  background: #f9f9f9;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform ease-out 0.3s;
+  position: absolute;
+  top: 50%;
+  z-index: 999;
+  color: #fff;
+}
+
+.slider-arrow-left:hover, .slider-arrow-right:hover {
+  transition: transform ease-in 0.3s;
+  transform: scale(1.5);
+}
+
+.slider-arrow-left {
+  left: 25px;
+}
+
+.slider-arrow-right {
+  right: 25px;
+}
+
+.dots-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 999;
+  padding: 5px 0;
+}
+
+.dots-wrapper .dot {
+  background: #222;
+  display: inline-block;
+  padding: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px
+}
+
+.dots-wrapper .dot-active {
+  background: #aaa;
+  display: inline-block;
+  padding: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px
+}
+
+.dot-active #osg, .dot-active #cod, .dot-active #cpg, .dot-active #isg {
+  stroke: black;
+  fill: black;
+}
+.dot svg path:hover, .dot svg path:focus, .dot svg path:active {
+  stroke: #69f0ae !important;
+  fill: #69f0ae !important;
+  height: 100px;
+}
+.dot #osg, .dot #cod, .dot #cpg, .dot #isg {
+  stroke: #2196f3;
+  fill: #2196f3;
+}
+
+.clubs-slider {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: white;
+}
+
+.clubs-slider .club-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 99.5vw;
+}
+
+.clubs-slider .club-wrapper .club-slide {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+.clubs-slider .club-wrapper .club-slide .blogs-list {
+  height: 100vh;
+  overflow: auto;
+}
+
+.club-slide .text-effect {
+  width: 100vw;
+  text-align: center;
+}
+
+.club-slide .club-title {
+  text-align: left;
+  display: inline-block;
+  position: absolute;
+  bottom: 30px;
+  color: #000;
+  margin-left: -10%;
+  user-select: none;
+  font: bold 200% Consolas, Monaco, monospace;
+  border-right: .1em solid black;
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-shadow: 2px 2px 2px black;
+  animation: typing 3s steps(30, end) infinite alternate,
+             cursor 1s step-end infinite alternate;
+}
+
+.blog .blog-header-right svg {
+  float: right;
+}
+
+.blog-tags {
+  font-weight: bold;
+}
