@@ -1,0 +1,32 @@
+
+#iconsDivHolder{
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    align-items: center;
+    justify-content: flex-start;
+}
+.iconsDiv{
+    display:flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 6vw;
+    border-right: 1px solid;
+}
+.icon{
+    width: 35px;
+}
+.iconValue{
+    font-weight: 400;
+    font-size:24px;
+}
+.iconDesc{
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.imageIcon{
+    width:100%;
+    height: 100%;
+    object-fit: contain;
+}
